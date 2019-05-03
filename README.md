@@ -1,2 +1,2 @@
 # docker-latex
-Docker file of latex
+Dockerfile for compiling latex on Gitlab CI
