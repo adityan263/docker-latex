@@ -1,7 +1,9 @@
 FROM ubuntu:latest
 MAINTAINER Aditya Neralkar <neralkarad15.it@coep.ac.in>
 
-RUN apt-get update && \
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 	 apt-cache depends texlive-full \
 	 | grep -v Suggests \
 	 | grep -v texlive-full \
